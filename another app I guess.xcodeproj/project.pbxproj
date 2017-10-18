@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7208A4461F8FF57B00926BDE /* SecondScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7208A4451F8FF57B00926BDE /* SecondScreenController.swift */; };
+		7208A4491F8FF9AE00926BDE /* ColorTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7208A4481F8FF9AE00926BDE /* ColorTools.swift */; };
+		725981E61F97D4880054658B /* MediaPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725981E51F97D4880054658B /* MediaPageController.swift */; };
 		726D9EA11F8D3C6D00208103 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726D9EA01F8D3C6D00208103 /* AppDelegate.swift */; };
 		726D9EA31F8D3C6D00208103 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726D9EA21F8D3C6D00208103 /* ViewController.swift */; };
 		726D9EA61F8D3C6D00208103 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 726D9EA41F8D3C6D00208103 /* Main.storyboard */; };
@@ -14,6 +17,7 @@
 		726D9EAB1F8D3C6D00208103 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 726D9EA91F8D3C6D00208103 /* LaunchScreen.storyboard */; };
 		726D9EB61F8D3C6D00208103 /* another_app_I_guessTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726D9EB51F8D3C6D00208103 /* another_app_I_guessTests.swift */; };
 		726D9EC11F8D3C6D00208103 /* another_app_I_guessUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726D9EC01F8D3C6D00208103 /* another_app_I_guessUITests.swift */; };
+		728E57061F9539EE0019005D /* ThirdScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728E57051F9539EE0019005D /* ThirdScreenViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7208A4451F8FF57B00926BDE /* SecondScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondScreenController.swift; sourceTree = "<group>"; };
+		7208A4481F8FF9AE00926BDE /* ColorTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTools.swift; sourceTree = "<group>"; };
+		725981E51F97D4880054658B /* MediaPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaPageController.swift; sourceTree = "<group>"; };
 		726D9E9D1F8D3C6D00208103 /* another app I guess.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "another app I guess.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		726D9EA01F8D3C6D00208103 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		726D9EA21F8D3C6D00208103 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +54,7 @@
 		726D9EBC1F8D3C6D00208103 /* another app I guessUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "another app I guessUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		726D9EC01F8D3C6D00208103 /* another_app_I_guessUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = another_app_I_guessUITests.swift; sourceTree = "<group>"; };
 		726D9EC21F8D3C6D00208103 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		728E57051F9539EE0019005D /* ThirdScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdScreenViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +82,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7208A4471F8FF99B00926BDE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7208A4481F8FF9AE00926BDE /* ColorTools.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		726D9E941F8D3C6D00208103 = {
 			isa = PBXGroup;
 			children = (
@@ -97,12 +113,11 @@
 		726D9E9F1F8D3C6D00208103 /* another app I guess */ = {
 			isa = PBXGroup;
 			children = (
-				726D9EA01F8D3C6D00208103 /* AppDelegate.swift */,
-				726D9EA21F8D3C6D00208103 /* ViewController.swift */,
-				726D9EA41F8D3C6D00208103 /* Main.storyboard */,
-				726D9EA71F8D3C6D00208103 /* Assets.xcassets */,
-				726D9EA91F8D3C6D00208103 /* LaunchScreen.storyboard */,
 				726D9EAC1F8D3C6D00208103 /* Info.plist */,
+				7208A4471F8FF99B00926BDE /* Model */,
+				726D9ECE1F8D4DB500208103 /* Controller */,
+				726D9ECF1F8D4E2700208103 /* View */,
+				726D9ED01F8D4E3D00208103 /* Resources */,
 			);
 			path = "another app I guess";
 			sourceTree = "<group>";
@@ -123,6 +138,35 @@
 				726D9EC21F8D3C6D00208103 /* Info.plist */,
 			);
 			path = "another app I guessUITests";
+			sourceTree = "<group>";
+		};
+		726D9ECE1F8D4DB500208103 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				726D9EA01F8D3C6D00208103 /* AppDelegate.swift */,
+				726D9EA21F8D3C6D00208103 /* ViewController.swift */,
+				7208A4451F8FF57B00926BDE /* SecondScreenController.swift */,
+				728E57051F9539EE0019005D /* ThirdScreenViewController.swift */,
+				725981E51F97D4880054658B /* MediaPageController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		726D9ECF1F8D4E2700208103 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				726D9EA91F8D3C6D00208103 /* LaunchScreen.storyboard */,
+				726D9EA41F8D3C6D00208103 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		726D9ED01F8D4E3D00208103 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				726D9EA71F8D3C6D00208103 /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,7 +304,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				726D9EA31F8D3C6D00208103 /* ViewController.swift in Sources */,
+				728E57061F9539EE0019005D /* ThirdScreenViewController.swift in Sources */,
+				7208A4491F8FF9AE00926BDE /* ColorTools.swift in Sources */,
+				725981E61F97D4880054658B /* MediaPageController.swift in Sources */,
 				726D9EA11F8D3C6D00208103 /* AppDelegate.swift in Sources */,
+				7208A4461F8FF57B00926BDE /* SecondScreenController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
