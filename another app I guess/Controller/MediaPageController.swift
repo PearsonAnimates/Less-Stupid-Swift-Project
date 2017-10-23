@@ -7,29 +7,31 @@
 //
 
 import UIKit
+import AVFoundation
 
 class MediaPageController : UIViewController
 {
     private lazy var color : ColorTools = ColorTools()    
     private var imageCounter = 0
-    private var imageFrame :UIImageView!
-    
+    private var soundPlayer : AVAudioPlayer?
     
     @IBOutlet weak var ChangeImageButton: UIButton!
     @IBOutlet weak var Play_PauseButton: UIButton!
     @IBOutlet weak var FishingSlider: UISlider!
-    @IBOutlet weak var PictureButtonOutlet: UIImageView!
+    @IBOutlet weak var imageFrame: UIImageView!
+    @IBOutlet weak var soundSlider: UISlider!
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        view.backgroundColor = color.createRandomColor()
+        loadAudioFile()
     }
     
     override func didReceiveMemoryWarning()
     {
         super.didReceiveMemoryWarning()
     }
-    
     
     private func changeImage() -> Void
     {
@@ -70,5 +72,31 @@ class MediaPageController : UIViewController
         
     }
     
+    
+    private func playMusicFile() -> Void
+    {
+        
+    }
+    
+    private func loadAudioFile() -> Void
+    {
+        if let soundURL = NSDataAsset(name: "AnnoyingVillagers")
+        {
+            do
+            {
+                try! AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+                try! AVAudioSession.sharedInstance().setActive(true)
+                
+                try soundPlayer = AVAudioPlayer(data: soundURL.data, fileYypeHint:
+                    AVFileType.mp3.rawValue)
+                soundSlider.maximumValue = Float ((soundPlayer?.duration)!)
+               // Timer.scheduledTimer(timeInterval, target: self, selector:(#selector(self.updateSlider)), userInfo: nil, repeats: true)
+            }
+            catch
+            {
+                print("Audio file doesn't exist")
+            }
+        }
+    }
     
 }

@@ -130,8 +130,9 @@
                     <connections>
                         <outlet property="ChangeImageButton" destination="sUS-db-7V5" id="rRh-6D-ScB"/>
                         <outlet property="FishingSlider" destination="g5V-jj-Ec8" id="dsT-l7-cGW"/>
-                        <outlet property="PictureButtonOutlet" destination="Hgo-AP-Wai" id="U1c-k7-Kw6"/>
                         <outlet property="Play_PauseButton" destination="8pE-uh-9tz" id="iWZ-M7-PqI"/>
+                        <outlet property="imageFrame" destination="Hgo-AP-Wai" id="8vW-0z-3Eb"/>
+                        <outlet property="soundSlider" destination="g5V-jj-Ec8" id="X2N-zo-DLf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t0P-Hh-2vg" userLabel="First Responder" sceneMemberID="firstResponder"/>
