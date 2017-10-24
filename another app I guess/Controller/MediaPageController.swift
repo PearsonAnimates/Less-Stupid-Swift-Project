@@ -11,24 +11,23 @@ import AVFoundation
 
 class MediaPageController : UIViewController
 {
-    private lazy var color : ColorTools = ColorTools()    
-    private var imageCounter = 0
+    @IBOutlet weak var ChangeImageButton: UIButton!
+    @IBOutlet weak var imageFrame: UIImageView!
+    @IBOutlet weak var soundSliderII: UISlider!
+    @IBOutlet weak var Play_PauseButton: UIButton!
+    
+    private lazy var color : ColorTools = ColorTools()
+    private var imageCounter : Int = 0
     private var soundPlayer : AVAudioPlayer?
     
-    @IBOutlet weak var ChangeImageButton: UIButton!
-    @IBOutlet weak var Play_PauseButton: UIButton!
-    @IBOutlet weak var FishingSlider: UISlider!
-    @IBOutlet weak var imageFrame: UIImageView!
-    @IBOutlet weak var soundSlider: UISlider!
-    
-    override func viewDidLoad()
+    public override func viewDidLoad() -> Void
     {
         super.viewDidLoad()
         view.backgroundColor = color.createRandomColor()
         loadAudioFile()
     }
     
-    override func didReceiveMemoryWarning()
+    public override func didReceiveMemoryWarning() -> Void
     {
         super.didReceiveMemoryWarning()
     }
@@ -39,6 +38,7 @@ class MediaPageController : UIViewController
         {
             imageCounter = 0
         }
+        
         if(imageCounter == 0)
         {
             imageFrame.image = UIImage(named: "avillager")
@@ -56,26 +56,46 @@ class MediaPageController : UIViewController
     }
     
     
-    @IBAction func ChangeImageButtonAction(_ sender: UIButton)
+    
+    @IBAction func soundButtonClick(_ sender: UIButton) -> Void
+    {
+        playMusicFile()
+    }
+    
+    @IBAction func ChangeImageButtonAction(_ sender: UIButton) -> Void
     {
         changeImage()
     }
     
     
-    @IBAction func Play_PauseButtonAction(_ sender: UIButton)
+    @IBAction func sliderMethod() -> Void
     {
-        
+        let seekTime = Double (soundSliderII.value)
+        soundPlayer?.currentTime = seekTime
     }
-    
-    @IBAction func FishingSliderAction(_ sender: UIButton)
-    {
-        
-    }
-    
     
     private func playMusicFile() -> Void
     {
-        
+        if let isPlaying = soundPlayer?.isPlaying
+        {
+            if (isPlaying)
+            {
+                soundPlayer?.pause()
+            }
+            else
+            {
+               soundPlayer?.play()
+            }
+        }
+        //Less stable version
+//        if ((soundPlayer?.isPlaying)!)
+//        {
+//            soundPlayer?.pause()
+//        }
+//        else
+//        {
+//            soundPlayer?.play()
+//        }
     }
     
     private func loadAudioFile() -> Void
@@ -87,16 +107,21 @@ class MediaPageController : UIViewController
                 try! AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
                 try! AVAudioSession.sharedInstance().setActive(true)
                 
-                try soundPlayer = AVAudioPlayer(data: soundURL.data, fileYypeHint:
+                try soundPlayer = AVAudioPlayer(data: soundURL.data, fileTypeHint:
                     AVFileType.mp3.rawValue)
-                soundSlider.maximumValue = Float ((soundPlayer?.duration)!)
-               // Timer.scheduledTimer(timeInterval, target: self, selector:(#selector(self.updateSlider)), userInfo: nil, repeats: true)
+                soundSliderII.maximumValue = Float ((soundPlayer?.duration)!)
+                Timer.scheduledTimer(timeInterval: 0.2, target: self, selector:(#selector(self.updateSlider)), userInfo: nil, repeats: true)
             }
             catch
             {
                 print("Audio file doesn't exist")
             }
         }
+    }
+    
+    @objc private func updateSlider() -> Void
+    {
+        soundSliderII.value = Float ((soundPlayer?.currentTime)!)
     }
     
 }

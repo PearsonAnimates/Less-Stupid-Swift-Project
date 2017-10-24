@@ -55,13 +55,16 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="To Media Page"/>
                                 <connections>
-                                    <segue destination="Sio-td-syd" kind="show" id="umX-pT-mj5"/>
+                                    <segue destination="Sio-td-syd" kind="show" id="TNL-sS-zJQ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GfI-BC-xEf">
                                 <rect key="frame" x="147" y="416" width="80" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="First Page"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="Hth-fU-Xdz"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wBU-wh-RAl">
                                 <rect key="frame" x="147" y="473" width="82" height="30"/>
@@ -93,14 +96,14 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Play/Pause"/>
                                 <connections>
-                                    <action selector="Play_PauseButtonAction:" destination="Sio-td-syd" eventType="touchUpInside" id="PTc-7f-YRX"/>
+                                    <action selector="soundButtonClick:" destination="Sio-td-syd" eventType="touchUpInside" id="nT6-e3-YwF"/>
                                 </connections>
                             </button>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="g5V-jj-Ec8">
                                 <rect key="frame" x="128" y="549" width="118" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <action selector="FishingSliderAction:" destination="Sio-td-syd" eventType="valueChanged" id="o9u-7A-n2Y"/>
+                                    <action selector="sliderMethod" destination="Sio-td-syd" eventType="valueChanged" id="m5I-NO-WLY"/>
                                 </connections>
                             </slider>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sUS-db-7V5">
@@ -129,10 +132,9 @@
                     </view>
                     <connections>
                         <outlet property="ChangeImageButton" destination="sUS-db-7V5" id="rRh-6D-ScB"/>
-                        <outlet property="FishingSlider" destination="g5V-jj-Ec8" id="dsT-l7-cGW"/>
-                        <outlet property="Play_PauseButton" destination="8pE-uh-9tz" id="iWZ-M7-PqI"/>
+                        <outlet property="Play_PauseButton" destination="8pE-uh-9tz" id="ikD-Xo-v8T"/>
                         <outlet property="imageFrame" destination="Hgo-AP-Wai" id="8vW-0z-3Eb"/>
-                        <outlet property="soundSlider" destination="g5V-jj-Ec8" id="X2N-zo-DLf"/>
+                        <outlet property="soundSliderII" destination="g5V-jj-Ec8" id="1Mt-v9-Qy2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t0P-Hh-2vg" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -171,6 +173,14 @@
                                     <segue destination="0is-qz-t3E" kind="show" id="Cqz-Ys-laZ"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k8U-R1-yr0">
+                                <rect key="frame" x="144" y="605" width="87" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Media Page"/>
+                                <connections>
+                                    <segue destination="0is-qz-t3E" kind="show" id="0Wt-px-EqR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -186,6 +196,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="Hth-fU-Xdz"/>
         <segue reference="z0a-hf-kr8"/>
     </inferredMetricsTieBreakers>
 </document>
