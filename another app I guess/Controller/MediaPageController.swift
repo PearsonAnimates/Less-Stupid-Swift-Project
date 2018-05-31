@@ -100,7 +100,7 @@ class MediaPageController : UIViewController
     
     private func loadAudioFile() -> Void
     {
-        if let soundURL = NSDataAsset(name: "AnnoyingVillagers")
+        if let soundURL = NSDataAsset(name: "BennyHills")
         {
             do
             {

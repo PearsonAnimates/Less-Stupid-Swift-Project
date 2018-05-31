@@ -113,7 +113,6 @@
 		726D9E9F1F8D3C6D00208103 /* another app I guess */ = {
 			isa = PBXGroup;
 			children = (
-				726D9EAC1F8D3C6D00208103 /* Info.plist */,
 				7208A4471F8FF99B00926BDE /* Model */,
 				726D9ECE1F8D4DB500208103 /* Controller */,
 				726D9ECF1F8D4E2700208103 /* View */,
@@ -165,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				726D9EA71F8D3C6D00208103 /* Assets.xcassets */,
+				726D9EAC1F8D3C6D00208103 /* Info.plist */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -475,7 +475,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "another app I guess/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/another app I guess/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "SSGG.another-app-I-guess";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -489,7 +489,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "another app I guess/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/another app I guess/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "SSGG.another-app-I-guess";
 				PRODUCT_NAME = "$(TARGET_NAME)";
